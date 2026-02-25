@@ -16,7 +16,7 @@ const featuredProducts = allProducts.filter(p => p.data.featured);
 		<div class="hero-content">
 			<h1>Artisan Crafts for Modern Living</h1>
 			<p>Hand-thrown pottery and curated jewellery, crafted with intention in our small studio.</p>
-			<a href={`${import.meta.env.BASE_URL}products`} class="btn">Explore Collection</a>
+			<a href={`${import.meta.env.BASE_URL}/products`} class="btn">Explore Collection</a>
 		</div>
 		<div class="hero-image">
 			<img src="https://images.unsplash.com/photo-1565191999001-551c187427bb?auto=format&fit=crop&q=80&w=1200" alt="Pottery Studio" />
@@ -26,7 +26,7 @@ const featuredProducts = allProducts.filter(p => p.data.featured);
 	<section class="featured">
 		<div class="section-header">
 			<h2>Featured Collection</h2>
-			<a href={`${import.meta.env.BASE_URL}products`} class="view-all">View All</a>
+			<a href={`${import.meta.env.BASE_URL}/products`} class="view-all">View All</a>
 		</div>
 		<div class="product-grid">
 			{featuredProducts.map(product => (

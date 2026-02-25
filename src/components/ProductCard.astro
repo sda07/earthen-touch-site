@@ -2,7 +2,7 @@
 const { title, price, image, category, inventoryStatus, slug } = Astro.props;
 ---
 
-<a href={`${import.meta.env.BASE_URL}products/${slug}`} class="product-card">
+<a href={`${import.meta.env.BASE_URL}/products/${slug}`} class="product-card">
 	<div class="image-container">
 		<img src={image} alt={title} />
 		{inventoryStatus === 'sold_out' && <span class="badge">Sold Out</span>}
