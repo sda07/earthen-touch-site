@@ -5,5 +5,5 @@ export default defineConfig({
   // Replace 'your-username' with your actual GitHub username
   // Replace 'earthen-touch-site' with your repository name if it's different
   site: 'https://sda07.github.io',
-  base: '/earthen-touch-site',
+  base: '/earthen-touch-site/',
 });
