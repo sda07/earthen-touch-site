@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ProductCard from '../components/ProductCard.astro';
+
+// Inventory logic: Filter out 'discontinued' items
+const allProducts = await getCollection('products', ({ data }) => {
+	return data.inventoryStatus !== 'discontinued';
+});
+
+const featuredProducts = allProducts.filter(p => p.data.featured);
+---
+
+<Layout title="Earthen Touch | Handmade Pottery & Jewellery">
+	<section class="hero">
+		<div class="hero-content">
+			<h1>Artisan Crafts for Modern Living</h1>
+			<p>Hand-thrown pottery and curated jewellery, crafted with intention in our small studio.</p>
+			<a href="/products" class="btn">Explore Collection</a>
+		</div>
+		<div class="hero-image">
+			<img src="https://images.unsplash.com/photo-1565191999001-551c187427bb?auto=format&fit=crop&q=80&w=1200" alt="Pottery Studio" />
+		</div>
+	</section>
+
+	<section class="featured">
+		<div class="section-header">
+			<h2>Featured Collection</h2>
+			<a href="/products" class="view-all">View All</a>
+		</div>
+		<div class="product-grid">
+			{featuredProducts.map(product => (
+				<ProductCard 
+					title={product.data.title}
+					price={product.data.price}
+					image={product.data.image}
+					category={product.data.category}
+					inventoryStatus={product.data.inventoryStatus}
+					slug={product.slug}
+				/>
+			))}
+		</div>
+	</section>
+
+	<style>
+		.hero {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			min-height: 80vh;
+			align-items: center;
+			gap: 4rem;
+			margin: 2rem 0;
+		}
+		@media (max-width: 768px) {
+			.hero {
+				grid-template-columns: 1fr;
+				text-align: center;
+				gap: 2rem;
+			}
+		}
+		.hero-content h1 {
+			font-size: clamp(2.5rem, 5vw, 4rem);
+			line-height: 1.1;
+			margin-bottom: 1.5rem;
+		}
+		.hero-content p {
+			font-size: 1.1rem;
+			color: #666;
+			margin-bottom: 2rem;
+			max-width: 450px;
+		}
+		.hero-image {
+			height: 70vh;
+			overflow: hidden;
+		}
+		.hero-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.btn {
+			display: inline-block;
+			padding: 1rem 2.5rem;
+			background: var(--text-color);
+			color: white;
+			text-decoration: none;
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			letter-spacing: 0.15rem;
+			transition: background 0.3s ease;
+		}
+		.btn:hover {
+			background: var(--accent-color);
+		}
+		.featured {
+			padding: 5rem 0;
+		}
+		.section-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 3rem;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 1rem;
+		}
+		.section-header h2 {
+			font-size: 2rem;
+			margin: 0;
+		}
+		.view-all {
+			text-decoration: none;
+			color: var(--text-color);
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			border-bottom: 1px solid var(--text-color);
+		}
+		.product-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 3rem;
+		}
+	</style>
+</Layout>

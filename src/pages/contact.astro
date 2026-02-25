@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | Earthen Touch">
+	<section class="contact-section">
+		<div class="contact-header">
+			<h1>Get in Touch</h1>
+			<p>Have a question about a piece or want to discuss a custom commission? We'd love to hear from you.</p>
+		</div>
+
+		<div class="contact-grid">
+			<div class="contact-info">
+				<div class="info-item">
+					<h3>WhatsApp</h3>
+					<p>Quickest for stock inquiries and orders.</p>
+					<a href="https://wa.me/910000000000" class="contact-link">+91 000 000 0000</a>
+				</div>
+				<div class="info-item">
+					<h3>Email</h3>
+					<p>Best for detailed commission requests.</p>
+					<a href="mailto:hello@earthentouch.in" class="contact-link">hello@earthentouch.in</a>
+				</div>
+				<div class="info-item">
+					<h3>Instagram</h3>
+					<p>Follow our process and new drops.</p>
+					<a href="https://instagram.com" class="contact-link">@earthentouch</a>
+				</div>
+			</div>
+
+			<div class="contact-form-placeholder">
+				<h3>Send a Message</h3>
+				<form onsubmit="event.preventDefault(); alert('In a live site, this would send an email!');">
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" placeholder="Your name" />
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" placeholder="Your email" />
+					</div>
+					<div class="form-group">
+						<label>Message</label>
+						<textarea rows="5" placeholder="How can we help?"></textarea>
+					</div>
+					<button type="submit" class="submit-btn">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		.contact-section {
+			padding: 6rem 0;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		.contact-header {
+			text-align: center;
+			margin-bottom: 5rem;
+		}
+		.contact-header h1 {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+		.contact-grid {
+			display: grid;
+			grid-template-columns: 1fr 1.5fr;
+			gap: 6rem;
+		}
+		@media (max-width: 768px) {
+			.contact-grid {
+				grid-template-columns: 1fr;
+				gap: 4rem;
+			}
+		}
+		.info-item {
+			margin-bottom: 3rem;
+		}
+		.info-item h3 {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		.info-item p {
+			font-size: 0.9rem;
+			color: #666;
+			margin-bottom: 0.5rem;
+		}
+		.contact-link {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-weight: 500;
+			border-bottom: 1px solid var(--accent-color);
+		}
+		
+		.contact-form-placeholder h3 {
+			margin-bottom: 2rem;
+		}
+		.form-group {
+			margin-bottom: 1.5rem;
+		}
+		label {
+			display: block;
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			margin-bottom: 0.5rem;
+		}
+		input, textarea {
+			width: 100%;
+			padding: 1rem;
+			border: 1px solid #eee;
+			background: #f9f9f9;
+			font-family: var(--sans);
+			outline: none;
+		}
+		input:focus, textarea:focus {
+			border-color: var(--accent-color);
+		}
+		.submit-btn {
+			width: 100%;
+			padding: 1rem;
+			background: var(--text-color);
+			color: white;
+			border: none;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			font-size: 0.8rem;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+		.submit-btn:hover {
+			background: var(--accent-color);
+		}
+	</style>
+</Layout>

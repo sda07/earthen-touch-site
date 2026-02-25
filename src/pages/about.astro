@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Story | Earthen Touch">
+	<section class="about-hero">
+		<h1>Handmade with Intention</h1>
+		<div class="hero-image">
+			<img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?auto=format&fit=crop&q=80&w=1200" alt="Pottery Hands" />
+		</div>
+	</section>
+
+	<section class="about-content">
+		<div class="text-block">
+			<h2>The Philosophy</h2>
+			<p>Earthen Touch was born out of a desire to slow down and reconnect with the materials of the earth. In a world of mass production, we believe there is a unique soul in objects made by hand.</p>
+			<p>Every piece of pottery and every item of jewellery is created in our small home studio. We don't aim for perfection; we aim for character. The slight irregularity in a glaze or the unique hammer mark on silver tells a story of the moment it was created.</p>
+		</div>
+
+		<div class="image-grid">
+			<img src="https://images.unsplash.com/photo-1565191999001-551c187427bb?auto=format&fit=crop&q=80&w=600" alt="Studio Detail" />
+			<img src="https://images.unsplash.com/photo-1590502160462-0995c6219352?auto=format&fit=crop&q=80&w=600" alt="Kiln Process" />
+		</div>
+
+		<div class="text-block">
+			<h2>Sustainability</h2>
+			<p>We are committed to low-impact creation. We source local clay, use recycled silver wherever possible, and our packaging is 100% plastic-free and recyclable.</p>
+		</div>
+	</section>
+
+	<style>
+		.about-hero {
+			text-align: center;
+			padding: 4rem 0;
+		}
+		h1 {
+			font-size: clamp(2.5rem, 5vw, 4rem);
+			margin-bottom: 3rem;
+		}
+		.hero-image {
+			height: 60vh;
+			overflow: hidden;
+			margin: 0 -2rem;
+		}
+		.hero-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.about-content {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 5rem 0;
+		}
+		.text-block {
+			margin-bottom: 5rem;
+		}
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		p {
+			font-size: 1.1rem;
+			line-height: 1.8;
+			color: #444;
+			margin-bottom: 1.5rem;
+		}
+		.image-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			margin-bottom: 5rem;
+		}
+		.image-grid img {
+			width: 100%;
+			aspect-ratio: 1;
+			object-fit: cover;
+		}
+		@media (max-width: 768px) {
+			.image-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</Layout>
