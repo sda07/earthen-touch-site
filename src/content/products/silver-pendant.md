@@ -3,7 +3,7 @@ title: "Hand-Hammered Silver Pendant"
 description: "A delicate, hand-hammered sterling silver pendant on a thin box chain."
 category: "Jewellery"
 price: 2500
-image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800"
+image: "/earthen-touch-site/images/IMG-20260228-WA0010.jpg"
 inventoryStatus: "live"
 featured: true
 ---

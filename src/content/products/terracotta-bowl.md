@@ -3,8 +3,8 @@ title: "Rustic Terracotta Bowl"
 description: "Large serving bowl made from natural terracotta with a hand-painted rim."
 category: "Pottery"
 price: 1800
-image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=800"
+image: "/earthen-touch-site/images/IMG-20260228-WA0002.jpg"
 inventoryStatus: "sold_out"
-featured: false
+featured: true
 ---
 Beautiful and functional, this bowl brings a rustic charm to any dining table.

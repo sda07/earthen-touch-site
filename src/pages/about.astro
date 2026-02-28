@@ -6,25 +6,34 @@ import Layout from '../layouts/Layout.astro';
 	<section class="about-hero">
 		<h1>Handmade with Intention</h1>
 		<div class="hero-image">
-			<img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?auto=format&fit=crop&q=80&w=1200" alt="Pottery Hands" />
+			<img src={`${import.meta.env.BASE_URL}/images/IMG-20260228-WA0001.jpg`} alt="Handmade Pottery" />
 		</div>
 	</section>
 
 	<section class="about-content">
 		<div class="text-block">
-			<h2>The Philosophy</h2>
-			<p>Earthen Touch was born out of a desire to slow down and reconnect with the materials of the earth. In a world of mass production, we believe there is a unique soul in objects made by hand.</p>
-			<p>Every piece of pottery and every item of jewellery is created in our small home studio. We don't aim for perfection; we aim for character. The slight irregularity in a glaze or the unique hammer mark on silver tells a story of the moment it was created.</p>
+			<h2>The Artisan's Journey</h2>
+			<p>Earthen Touch is a small, home-based studio born out of a passion for the tactile beauty of clay and the soul of handmade objects. As a female entrepreneur, I've built this brand on the principles of mindfulness, slow creation, and a deep respect for natural materials.</p>
+			<p>Every piece you see here is hand-thrown and finished in my personal studio. I believe that in an era of mass production, there is a unique magic in objects that carry the fingerprints of their maker. My work doesn't strive for machine-perfect symmetry; instead, it celebrates the character and story found in every slight variation.</p>
 		</div>
 
 		<div class="image-grid">
-			<img src="https://images.unsplash.com/photo-1565191999001-551c187427bb?auto=format&fit=crop&q=80&w=600" alt="Studio Detail" />
-			<img src="https://images.unsplash.com/photo-1590502160462-0995c6219352?auto=format&fit=crop&q=80&w=600" alt="Kiln Process" />
+			<img src={`${import.meta.env.BASE_URL}/images/IMG-20260228-WA0002.jpg`} alt="Artisan at work" />
+			<img src={`${import.meta.env.BASE_URL}/images/IMG-20260228-WA0003.jpg`} alt="Clay details" />
 		</div>
 
 		<div class="text-block">
-			<h2>Sustainability</h2>
-			<p>We are committed to low-impact creation. We source local clay, use recycled silver wherever possible, and our packaging is 100% plastic-free and recyclable.</p>
+			<h2>Small Studio, Big Heart</h2>
+			<p>Operating from my home allows me to stay connected to the rhythm of creation every single day. From the first wedge of clay to the final glaze firing, I am involved in every step of the process. This intimate scale ensures that every bowl, vase, and piece of jewellery receives the attention it deserves before finding its new home with you.</p>
+		</div>
+
+		<div class="full-width-image">
+			<img src={`${import.meta.env.BASE_URL}/images/IMG-20260228-WA0004.jpg`} alt="Finished Pieces" />
+		</div>
+
+		<div class="text-block">
+			<h2>Sustainability & Values</h2>
+			<p>We are committed to low-impact creation. We source local materials whenever possible, and our packaging is 100% plastic-free and recyclable. We believe that beautiful things shouldn't cost the earth.</p>
 		</div>
 	</section>
 
@@ -36,11 +45,14 @@ import Layout from '../layouts/Layout.astro';
 		h1 {
 			font-size: clamp(2.5rem, 5vw, 4rem);
 			margin-bottom: 3rem;
+			font-family: var(--serif);
+			letter-spacing: 0.1rem;
 		}
 		.hero-image {
-			height: 60vh;
+			height: 70vh;
 			overflow: hidden;
 			margin: 0 -2rem;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 		}
 		.hero-image img {
 			width: 100%;
@@ -48,37 +60,66 @@ import Layout from '../layouts/Layout.astro';
 			object-fit: cover;
 		}
 		.about-content {
-			max-width: 800px;
+			max-width: 900px;
 			margin: 0 auto;
 			padding: 5rem 0;
 		}
 		.text-block {
-			margin-bottom: 5rem;
+			margin: 6rem 0;
+			text-align: center;
 		}
 		h2 {
-			font-size: 2rem;
-			margin-bottom: 1.5rem;
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+			font-family: var(--serif);
+			color: var(--accent-color);
 		}
 		p {
-			font-size: 1.1rem;
-			line-height: 1.8;
-			color: #444;
-			margin-bottom: 1.5rem;
+			font-size: 1.15rem;
+			line-height: 1.9;
+			color: #555;
+			margin-bottom: 2rem;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		.image-grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 2rem;
-			margin-bottom: 5rem;
+			gap: 3rem;
+			margin: 6rem 0;
 		}
 		.image-grid img {
 			width: 100%;
-			aspect-ratio: 1;
+			aspect-ratio: 4/5;
 			object-fit: cover;
+			box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+		}
+		.full-width-image {
+			margin: 6rem -5rem;
+			height: 60vh;
+			overflow: hidden;
+		}
+		.full-width-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 1024px) {
+			.full-width-image {
+				margin: 6rem -2rem;
+			}
 		}
 		@media (max-width: 768px) {
 			.image-grid {
 				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+			.full-width-image {
+				height: 40vh;
+			}
+			h2 {
+				font-size: 2rem;
 			}
 		}
 	</style>
