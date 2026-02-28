@@ -1,43 +1,27 @@
-# Astro Starter Kit: Minimal
+# Earthen Touch
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**Handmade with Intention**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Earthen Touch is a small, female-led, home-based studio in Kolkata, born out of a passion for the tactile beauty of clay and the soul of handmade objects. We believe that in an era of mass production, there is a unique magic in objects that carry the fingerprints of their maker.
 
-## 🚀 Project Structure
+## The Artisan's Journey
+Our brand is built on the principles of mindfulness, slow creation, and a deep respect for natural materials. Every piece is hand-thrown and finished in a personal studio. We don't strive for machine-perfect symmetry; instead, we celebrate the character and story found in every slight variation.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Our Philosophy
+- **Small Studio, Big Heart:** Operating from home allows for a deep connection to the rhythm of creation every single day. From the first wedge of clay to the final glaze firing, every step is handled with care.
+- **Sustainability & Values:** We are committed to low-impact creation. We source local materials whenever possible, and our packaging is 100% plastic-free and recyclable. We believe that beautiful things shouldn't cost the earth.
+- **Zen-Modern Aesthetic:** Our designs bridge the gap between ancient techniques and modern aesthetics, focusing on simplicity and functionality.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tech Stack
+- **Framework:** [Astro](https://astro.build/) (Static Site Generation)
+- **Styling:** Vanilla CSS
+- **Deployment:** GitHub Pages
+- **Integration:** WhatsApp-based inquiries for a personal connection
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
+To view the project locally:
+1. `npm install`
+2. `npm run dev`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Crafted with soul in our small studio.*
