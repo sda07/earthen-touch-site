@@ -1,4 +1,6 @@
 ---
+import Logo from '../components/Logo.astro';
+
 interface Props {
 	title: string;
 }
@@ -23,7 +25,9 @@ const { title } = Astro.props;
 		<header id="main-header">
 			<nav>
 				<div class="logo">
-					<a href={import.meta.env.BASE_URL}>EARTHEN TOUCH</a>
+					<a href={import.meta.env.BASE_URL}>
+						<Logo size="medium" />
+					</a>
 				</div>
 				<ul>
 					<li><a href={`${import.meta.env.BASE_URL}/products`}>Shop</a></li>
